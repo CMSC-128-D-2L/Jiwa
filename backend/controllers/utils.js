@@ -82,6 +82,14 @@ exports.validateGradeRecords = (studentData) => {
         runningSum += computed;
         semUnits += 6;
         totalUnits += 6;
+
+      //  Count units of a course if grade is not DRP 
+      } else if (!isLOA && course.Grade != "DRP") {
+        semUnits += parseInt(course.Units);
+        
+        //  add to total units if course is not a thesis course
+        if (course.CourseID.search('200') < 0)
+          totalUnits += parseInt(course.Units);
       }
 
       /* Check if computed gradepoints is a number:
@@ -113,6 +121,7 @@ exports.validateGradeRecords = (studentData) => {
          (currentSem[1] > 19 && semUnits < 12 ||
          currentSem[1] <= 19 && semUnits < 15)) {
 
+        studentData.notes += '. Underload Sem: ' + sem.date;
         errorReport.underloadErrors++;
         errorReport.underloadDiagnostics.push('Sem: ' + sem.date);
       }

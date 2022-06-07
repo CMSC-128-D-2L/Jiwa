@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended", 
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react", 
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["warn", { "endOfLine": "auto" }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "func-names": "off",
+    "class-methods-use-this": "off",
+    "prefer-destructuring": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off"
+  }
+}

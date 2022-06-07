@@ -1,0 +1,22 @@
+/* Delete if not needed */
+.App {
+    text-align: center;
+    height: calc(100vh - 66px); /* height of navbar = 66px */
+  }
+
+  .viewRecords{
+    height: calc(100vh - 226px); /* height of navbar + taskbar = 156px */
+  }
+  
+  .table{
+    height: calc(100vh - 172px); /* height of navbar + taskbar = 156px */
+  }
+
+  @media print {
+    .noPrint {
+        display: none;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }

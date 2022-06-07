@@ -1,0 +1,43 @@
+.stepCircle {
+  --color-yellow: #f3aa2c;
+  --color-green: #014421;
+  --color-gray: #ededed;
+  --color-darkgray: #c6c6c6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+}
+
+.stepCircle p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.done {
+  background-color: var(--color-green);
+}
+
+.current {
+  background-color: var(--color-yellow);
+}
+
+.todo {
+  background-color: var(--color-gray);
+  border: 2px solid var(--color-darkgray);
+}
+
+.todoconnector {
+  background-color: var(--color-gray);
+}
+
+.connector {
+  --color-green: #014421;
+  --color-gray: #ededed;
+  position: relative;
+  top: 2.5em;
+  width: 8em;
+  height: 0.5em;
+}

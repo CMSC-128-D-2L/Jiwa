@@ -1,0 +1,87 @@
+.inputTable {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+  margin: 20px auto 0 auto;
+  max-width: 1140px;
+  padding: 10px;
+}
+
+.tableRow {
+  vertical-align: middle;
+  border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+.csLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7b1113;
+  margin: 0;
+}
+
+.inputCourseInfo {
+  border: transparent;
+  border-bottom: 2px solid black;
+  font-weight: bold;
+  width: 150px;
+}
+
+.inputError {
+  border: 2px solid red;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.inputError:focus {
+  outline: none;
+  border: 2px solid red;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.inputRemarks {
+  border: transparent;
+  border-bottom: 2px solid black;
+  width: 500px;
+}
+
+.studentInfo {
+  border: transparent;
+  border-bottom: 2px solid black;
+  font-weight: bold;
+  width: 200px;
+}
+
+.studentInfo {
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.btnDiv {
+  display: grid;
+  margin: auto;
+}
+
+.addBtn {
+  height: 40px;
+  width: 40px;
+  font-weight: bold;
+  background-color: #014421;
+  color: white;
+  border: none;
+}
+
+.addBtn:hover {
+  background-color: #014421;
+  color: white;
+  box-shadow: 0 4px 8px #0000002e;
+}
+
+.addBtn:disabled {
+  background: #a4bdb0;
+  color: white;
+  border: none;
+  box-shadow: none;
+}

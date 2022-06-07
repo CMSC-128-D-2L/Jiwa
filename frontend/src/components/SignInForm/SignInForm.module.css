@@ -1,0 +1,32 @@
+.formContainer {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 35px !important;
+}
+
+@media (min-width: 768px) {
+  .formContainer {
+    width: 450px !important;
+  }
+}
+
+.fieldsContainer {
+  margin: 30px 0 40px;
+  text-align: left;
+}
+
+.btnLogin {
+  color: #ffffff;
+  background-color: #7b1113;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  padding: 8px;
+}
+
+.btnLogin:hover {
+  background: #014421;
+}
+
+.btnContainer {
+  margin: 20px 0;
+}

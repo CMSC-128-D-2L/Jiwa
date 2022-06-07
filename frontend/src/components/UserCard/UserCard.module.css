@@ -1,0 +1,61 @@
+.title {
+  color: #014421;
+  font-weight: bold;
+}
+
+.card {
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+  transition: 0.1s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.modalBtnGreen {
+  background-color: #014421 !important;
+  border: none;
+  border-radius: 10px;
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+.modalBtnRed {
+  border: none;
+  border-radius: 10px;
+  color: #7b1113 !important;
+  float: left;
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+.modalBtnGreenNoOutline {
+  border-radius: 10px;
+  color: #014421 !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+.modalBtnGreen:hover {
+  outline: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.modalBtnGreen:hover {
+  background-color: #014421;
+  color: white;
+}
+
+.modalBtnRed:hover {
+  color: #7b1113;
+  background-color: #fcc8c8;
+}
+
+.modalBtnGreenNoOutline:hover {
+  color: #014421;
+  background-color: #b3fdd7;
+}

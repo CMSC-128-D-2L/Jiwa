@@ -1,0 +1,38 @@
+#table {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  width: auto;
+  max-width: 90%;
+  margin-top: 20px;
+}
+
+.tableRow {
+  vertical-align: middle;
+  border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+.editFieldNumber {
+  border: transparent;
+  border-bottom: 2px solid black;
+  width: 50px;
+}
+
+.editFieldNumberError {
+  border: 2px solid red;
+  border-radius: 4px;
+  width: 50px;
+}
+
+@media screen and (max-width: 770px) {
+  #table {
+    max-width: 100%;
+  }
+}
+
+@media print {
+  #table {
+    box-shadow: 0;
+  }
+}

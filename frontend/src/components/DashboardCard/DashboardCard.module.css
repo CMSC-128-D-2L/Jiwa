@@ -1,0 +1,62 @@
+.dashboardCard {
+  min-height: 350px;
+  background: #ffffff;
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin: 15px 0 10px 0;
+  padding: 25px 35px;
+  transition: 0.1s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.dashboardCard:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.dashboardCardButton {
+  padding: 0.5em 3em;
+  font-weight: bold;
+  background: #014421;
+  color: #F5F5F5;
+  border: 0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dashboardCardButton:hover {
+  box-shadow: 0 4px 8px #0000002e;
+}
+
+.dashboardCardIcon {
+  color: #335628;
+  width: 4.2em;
+  height: 4em;
+  margin: 0;
+}
+
+.dashboardCardLabel {
+  font-weight: 500;
+  line-height: 42px;
+  color: #000000;
+  margin: 0;
+  text-align: center;
+}
+
+.dashboardCardDesc {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+  color: #888888;
+  margin: 0;
+}
+
+@media only screen and (max-width: 770px) {
+  .dashboardCard {
+    max-width: 350px;
+    margin: 12px auto 10px auto;
+  }
+}

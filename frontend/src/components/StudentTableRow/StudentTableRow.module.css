@@ -1,0 +1,16 @@
+.tableRow {
+  vertical-align: middle;
+  border-right: 1px solid rgb(161, 161, 161);
+  border-bottom: 0;
+  border-top: 1px solid rgb(161, 161, 161);
+}
+
+.termCol {
+  border-right: 0 solid rgb(161, 161, 161);
+}
+
+@media print {
+  .termCol {
+    vertical-align: top;
+  }
+}

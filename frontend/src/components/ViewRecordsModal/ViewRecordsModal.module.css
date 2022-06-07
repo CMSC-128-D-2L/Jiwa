@@ -1,0 +1,82 @@
+.darkBG {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 1000vh;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+  
+.mainCentered {
+    position: fixed;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.modal {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: gray;
+    border-radius: 10px;
+    width: 500px;
+    padding: 30px;
+    font-size: 14px;
+}
+  
+.saveHeader {
+    overflow: hidden;
+}
+  
+.saveHeading {
+    font-weight: bold;
+    color: #014421;
+}
+  
+.modalClose {
+    color: #7b1113;
+    margin: 15px;
+    width: 22px;
+    height: 22px;
+    border-radius: 55%;
+    border-color: #7b1113;
+    border-width: 1px;
+    background: white;
+    transition: all 0.25s ease;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+    position: absolute;
+    right: 0;
+    top: 0;
+    align-self: flex-end;
+}
+
+.modalInputPass{
+    border-radius: 10px;
+}
+  
+.modalSave {
+    margin-top: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    background-color: #014421;
+}
+  
+.modalSave:hover, .modalSave:active, .modalSave:focus {
+    background-color: #014421;
+    outline: none;
+    box-shadow: none;
+    box-shadow: 0 4px 8px #0000002e;
+}
+
+.maxHeight{
+    max-height: 50px;
+}

@@ -1,0 +1,47 @@
+#main {
+  border: 1px;
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.dangerTxt {
+  font-size: 14px;
+}
+
+.headerEditProfile {
+  font-weight: 900;
+  color: #014421;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subheadEditProfile {
+  font-size: 18px;
+}
+
+.bodyEditProfile {
+  color: #757575;
+}
+
+.dangerEditProfile {
+  font-size: 14px;
+}
+
+#buttonSC,
+#buttonCP {
+  font-weight: bold;
+  background-color: #014421;
+  color: white;
+  margin-top: 1.5em;
+  width: 100%;
+  padding: 0.75em 0;
+}
+
+.btnPrimary:hover {
+  background-color: #014421;
+  color: white;
+  box-shadow: 0 4px 8px #0000002e;
+}

@@ -1,0 +1,28 @@
+.navbar {
+  background-image: linear-gradient(to right, #ab3522, #7b1113);
+}
+
+[data-initials]:before {
+  background: #f3aa2c;
+  color: white;
+  content: attr(data-initials);
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin-right: 10px;
+  margin-left: -5px;
+}
+
+.dropdown {
+  width: 180px;
+}
+
+@media screen and (max-width: 767px) {
+  .smallText {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

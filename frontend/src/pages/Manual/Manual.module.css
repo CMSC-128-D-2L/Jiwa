@@ -1,0 +1,167 @@
+.all {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar CSS =============================================== */
+.sidebar {
+  width: 18.5%;
+  padding: 17px 15px 14px 20px;
+  background-color: #ffffff;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  box-shadow: 1px 0 7px #d3d3d3;
+}
+
+.sidebarA {
+  display: block;
+  padding: 11px;
+  color: #888888;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebarA:hover {
+  color: #7b1113;
+  font-weight: bold;
+}
+
+.active {
+  color: #7b1113;
+  font-weight: bold;
+  transition: all 50ms ease-in-out;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 11px;
+}
+
+.active:hover {
+  color: #7b1113;
+}
+
+/* Content CSS ============================================== */
+.main {
+  width: 82%;
+  margin-left: auto;
+  padding: 40px 70px 10px 80px;
+  position: relative;
+}
+
+.embedResponsive {
+  position: relative;
+  padding-top: 32%;
+}
+
+.video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 56.8%;
+  height: 100%;
+}
+
+.content {
+  font-size: 16px;
+  display: inline-block;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-bottom: 15px;
+}
+
+.imageCaption {
+  font-size: 14px;
+  text-align: center;
+}
+
+.pictureContainer {
+  width: 48%;
+  margin-bottom: 16px;
+}
+
+img {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+/* Responsiveness =========================================== */
+@media screen and (max-width: 900px) {
+  .sidebar {
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60px;
+    padding: 8px 8px 8px 9px;
+    background-color: #ffffff;
+    overflow-y: hidden;
+    white-space: nowrap;
+    z-index: 1;
+    position: fixed;
+  }
+
+  .sidebarA {
+    display: inline-block;
+    color: #888888;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .main {
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 66px;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 40px 50px 10px 60px;
+  }
+
+  .embedResponsive {
+    position: relative;
+    padding-top: 56.25%;
+  }
+
+  .video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    height: 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .pictureContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    position: relative;
+    width: 100%;
+    top: 40px;
+    margin-left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 40px 20px 10px 30px;
+  }
+}
+
+/* Scrollbar ================================================ */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 14px 14px #bbbbbe;
+  border: solid 4px transparent;
+  border-radius: 14px;
+}

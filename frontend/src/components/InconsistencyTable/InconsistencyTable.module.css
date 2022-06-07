@@ -1,0 +1,17 @@
+.cell {
+  position: relative;
+  min-width: 13ch;
+}
+
+.spawnTooltip + div {
+  display: none !important;
+}
+
+.spawnTooltip:focus + div,
+.spawnTooltip:hover + div {
+  display: block !important;
+}
+
+.separatedRow {
+  border-bottom: 0.1em solid black;
+}

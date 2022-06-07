@@ -1,0 +1,117 @@
+.table {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.studentInfo .label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7b1113;
+  margin: 0;
+}
+
+.studentInfo .info {
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.tableRow {
+  vertical-align: middle;
+  border-right: 1px solid rgb(161, 161, 161);
+  border-bottom: 0;
+  border-top: 1px solid rgb(161, 161, 161);
+}
+
+.termCol {
+  border-right: 0 solid rgb(161, 161, 161);
+}
+
+.forPrint {
+  display: none;
+}
+
+.editFieldText {
+  border: transparent;
+  border-bottom: 2px solid black;
+  width: 120px;
+}
+
+.editFieldNumber {
+  border: transparent;
+  border-bottom: 2px solid black;
+  width: 50px;
+}
+
+.editFieldNumberError {
+  border: 2px solid red;
+  border-radius: 4px;
+  width: 50px;
+}
+
+.editFieldNumberError:focus {
+  outline: none;
+  border: 2px solid red;
+  border-radius: 4px;
+  width: 50px;
+}
+
+.editStudentInfo {
+  border: transparent;
+  border-bottom: 2px solid black;
+  font-weight: bold;
+  width: 200px;
+}
+
+@media screen and (max-width: 769px) {
+  .editFieldText {
+    width: 85px;
+  }
+
+  .editFieldNumber {
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .editFieldText {
+    width: 70px;
+  }
+
+  .editFieldNumber {
+    width: 30px;
+  }
+
+  .editStudentInfo {
+    width: 150px;
+  }
+
+  .editDegree {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .editFieldText {
+    width: 50px;
+  }
+
+  .editFieldNumber {
+    width: 20px;
+  }
+}
+
+@media print {
+  .studentInfo {
+    display: none;
+  }
+
+  .forPrint {
+    display: block;
+  }
+
+  .table {
+    box-shadow: 0;
+  }
+}

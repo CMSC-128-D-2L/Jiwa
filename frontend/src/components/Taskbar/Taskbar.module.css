@@ -1,0 +1,39 @@
+.container{
+  margin-top: 20px !important;
+  font-size: 16px !important;
+}
+
+
+
+.printBtn {
+  background: #014421;
+  color: #F5F5F5;
+  font-size: .7em !important;
+  font-weight: bold !important;
+}
+
+
+.pageLink:hover {
+  background-color: rgb(174, 173, 173) !important;
+}
+
+.pageLink {
+  background-color: transparent !important;
+  color: black !important;
+  border-color: transparent !important;
+  cursor: pointer;
+  margin: 0px !important;
+  padding-bottom: 1px !important;
+  padding-top: 1px !important;
+}
+
+.active {
+  background-color: rgb(174, 173, 173) !important;
+}
+
+
+@media print {
+  .noPrint {
+      display: none;
+  }
+}

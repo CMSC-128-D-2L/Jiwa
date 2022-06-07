@@ -1,0 +1,12 @@
+.dashboardPage {
+  /* Since there is no visible container for the dashboard cards, the margin each card has needs to be considered. */
+  /* Plus the margin of the dashboard cards, the total margin (from the navbar) is 20px auto 40px auto. */
+  margin: 5px auto 30px auto;
+  max-width: 1250px;
+}
+
+@media only screen and (max-width: 1230px) {
+  .dashboardPage {
+    margin: 5px 10px 30px 10px;
+  }
+}

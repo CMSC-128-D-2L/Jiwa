@@ -1,0 +1,75 @@
+.studentRecord {
+    margin: 20px auto 40px auto;
+    max-width: 1140px;
+}
+
+.return {
+    color: #038140;
+}
+
+.returnText {
+    font-style: normal;
+    font-size: 0.45em;
+    margin-left: 7px;
+    vertical-align: 6px;
+}
+
+.returnIcon {
+    font-size: 1.8em;
+}
+
+.returnIcon:hover{
+    cursor: pointer;
+}
+
+.editBtn, .printBtn, .cancelBtn {
+    width: 70px;
+    height: 30px;
+    padding: 0;
+    letter-spacing: 0.04em;
+    border: 1px solid #014421;
+    border-radius: 8px;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.editBtn:hover, .printBtn:hover, .cancelBtn:hover {
+    box-shadow: 0 4px 8px #0000002e;
+}
+
+.editBtn {
+    background: #014421;
+    color: #F5F5F5;
+}
+
+.printBtn {
+    background: #014421;
+    color: #F5F5F5;
+}
+
+.printBtn:disabled {
+    background: white;
+    color: #d1d1d1;
+    border: none;
+}
+
+.cancelBtn {
+    border: 1px solid #7B1113;
+    color: #F5F5F5;
+    background: #7B1113;
+}
+
+@media print {
+    .noPrint {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .studentRecord {
+        margin: 20px 10px 40px 10px;
+    }
+}
+  

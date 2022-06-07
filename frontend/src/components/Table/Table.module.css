@@ -1,0 +1,35 @@
+.table {
+  background-color: white;
+  border-radius: 10px;
+  border-collapse: separate;
+  font-size: 16px !important;
+  margin-bottom: 20px !important;
+}
+
+.viewButton{
+  background-color: #014421 !important;
+  color: white !important;
+  font-size: .7em !important;
+  font-weight: bold !important;
+}
+
+.viewButton:hover {
+	box-shadow: 0 1px 2px rgb(72,78,85);
+
+}
+
+.maxwidth{
+  max-width:150px !important;
+}
+
+@media print {
+  .noPrint {
+      display: none;
+  }
+
+  .printStyle{
+    page-break-before: auto;
+    page-break-after: auto;
+    page-break-inside:avoid;
+  }
+}

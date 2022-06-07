@@ -97,7 +97,6 @@ export const UserManagement = () => {
   };
 
   const searchUser = () => {
-    console.log("Search User");
     if (search !== "") {
       fetch(apiUrl(`/user/`), {
         method: "GET",
@@ -303,7 +302,6 @@ export const UserManagement = () => {
     } else {
       viewablePages = pages.slice(currentPage - 2, currentPage + 1);
     }
-    // console.log(viewablePages);
     return viewablePages;
   };
 

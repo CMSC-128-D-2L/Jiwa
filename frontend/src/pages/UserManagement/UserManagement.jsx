@@ -9,7 +9,7 @@ import { RegistrationsTab } from "../../components/RegistrationsTab";
 import { PWReqsTab } from "../../components/PWReqsTab";
 
 export const UserManagement = () => {
-  const pageSize = 4;
+  const pageSize = 20;
   const [users, setUsers] = useState([]);
   const [paginatedUsers, setPaginatedUsers] = useState([]);
   const [PWRequests, setPWRequests] = useState([]);

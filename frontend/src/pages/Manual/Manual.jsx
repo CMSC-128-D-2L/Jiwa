@@ -41,7 +41,27 @@ import create9 from "../../assets/images/Create9.png";
 import create10 from "../../assets/images/Create10.png";
 import create11 from "../../assets/images/Create11.png";
 import create12 from "../../assets/images/Create12.png";
+import admin1 from "../../assets/images/Admin1.png";
+import admin2 from "../../assets/images/Admin2.png";
+import admin3 from "../../assets/images/Admin3.png";
+import admin4 from "../../assets/images/Admin4.png";
+import admin5 from "../../assets/images/Admin5.png";
+import admin6 from "../../assets/images/Admin6.png";
+import admin7 from "../../assets/images/Admin7.png";
+import admin8 from "../../assets/images/Admin8.png";
+import admin9 from "../../assets/images/Admin9.png";
+import admin10 from "../../assets/images/Admin10.png";
+import admin11 from "../../assets/images/Admin11.png";
+import admin12 from "../../assets/images/Admin12.png";
+import admin13 from "../../assets/images/Admin13.png";
+import admin14 from "../../assets/images/Admin14.png";
+import admin15 from "../../assets/images/Admin15.png";
+import admin16 from "../../assets/images/Admin16.png";
+import admin17 from "../../assets/images/Admin17.png";
+import admin18 from "../../assets/images/Admin18.png";
+import admin19 from "../../assets/images/Admin19.png";
 import { useState, useRef, useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 
 export const Manual = () => {
   const [currentScroll, setCurrentScroll] = useState(0);
@@ -50,17 +70,22 @@ export const Manual = () => {
   const [activeCreateLink, setActiveCreateLink] = useState(false);
   const [activeViewLink, setActiveViewLink] = useState(false);
   const [activeAboutLink, setActiveAboutLink] = useState(false);
+  const [activeAdminLink, setActiveAdminLink] = useState(false);
+
+  const [email] = useOutletContext();
 
   const navRef = useRef();
   const uploadRef = useRef();
   const createRef = useRef();
   const viewRef = useRef();
   const aboutRef = useRef();
+  const adminRef = useRef();
   const [navY, setNavY] = useState();
   const [uploadY, setUploadY] = useState();
   const [createY, setCreateY] = useState();
   const [viewY, setViewY] = useState();
   const [aboutY, setAboutY] = useState();
+  const [adminY, setAdminY] = useState();
 
   useEffect(() => {
     getNavPosition();
@@ -94,40 +119,91 @@ export const Manual = () => {
     setViewY(y3);
     setAboutY(y4);
     setCreateY(y5);
+
+    if (email == "admin") {
+      const y6 = adminRef.current.offsetTop;
+      setAdminY(y6);
+    }
+
     updateNavLink();
   };
 
   const updateNavLink = () => {
-    if (currentScroll >= navY && currentScroll < uploadY) {
-      setActiveNavLink(true);
-      setActiveUploadLink(false);
-      setActiveCreateLink(false);
-      setActiveViewLink(false);
-      setActiveAboutLink(false);
-    } else if (currentScroll >= uploadY && currentScroll < createY) {
-      setActiveNavLink(false);
-      setActiveUploadLink(true);
-      setActiveCreateLink(false);
-      setActiveViewLink(false);
-      setActiveAboutLink(false);
-    } else if (currentScroll >= createY && currentScroll < viewY) {
-      setActiveNavLink(false);
-      setActiveUploadLink(false);
-      setActiveCreateLink(true);
-      setActiveViewLink(false);
-      setActiveAboutLink(false);
-    } else if (currentScroll >= viewY && currentScroll < aboutY) {
-      setActiveNavLink(false);
-      setActiveUploadLink(false);
-      setActiveCreateLink(false);
-      setActiveViewLink(true);
-      setActiveAboutLink(false);
-    } else if (currentScroll >= aboutY) {
-      setActiveNavLink(false);
-      setActiveUploadLink(false);
-      setActiveCreateLink(false);
-      setActiveViewLink(false);
-      setActiveAboutLink(true);
+    if (email == "admin") {
+      if (currentScroll >= navY && currentScroll < adminY) {
+        setActiveNavLink(true);
+        setActiveAdminLink(false);
+        setActiveUploadLink(false);
+        setActiveCreateLink(false);
+        setActiveViewLink(false);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= adminY && currentScroll < uploadY) {
+        setActiveNavLink(false);
+        setActiveAdminLink(true);
+        setActiveUploadLink(false);
+        setActiveCreateLink(false);
+        setActiveViewLink(false);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= uploadY && currentScroll < createY) {
+        setActiveNavLink(false);
+        setActiveAdminLink(false);
+        setActiveUploadLink(true);
+        setActiveCreateLink(false);
+        setActiveViewLink(false);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= createY && currentScroll < viewY) {
+        setActiveNavLink(false);
+        setActiveAdminLink(false);
+        setActiveUploadLink(false);
+        setActiveCreateLink(true);
+        setActiveViewLink(false);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= viewY && currentScroll < aboutY) {
+        setActiveNavLink(false);
+        setActiveAdminLink(false);
+        setActiveUploadLink(false);
+        setActiveCreateLink(false);
+        setActiveViewLink(true);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= aboutY) {
+        setActiveNavLink(false);
+        setActiveUploadLink(false);
+        setActiveCreateLink(false);
+        setActiveViewLink(false);
+        setActiveAboutLink(true);
+      }
+    } else {
+      if (currentScroll >= navY && currentScroll < uploadY) {
+        setActiveNavLink(true);
+        setActiveUploadLink(false);
+        setActiveCreateLink(false);
+        setActiveViewLink(false);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= uploadY && currentScroll < createY) {
+        setActiveNavLink(false);
+        setActiveUploadLink(true);
+        setActiveCreateLink(false);
+        setActiveViewLink(false);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= createY && currentScroll < viewY) {
+        setActiveNavLink(false);
+        setActiveUploadLink(false);
+        setActiveCreateLink(true);
+        setActiveViewLink(false);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= viewY && currentScroll < aboutY) {
+        setActiveNavLink(false);
+        setActiveUploadLink(false);
+        setActiveCreateLink(false);
+        setActiveViewLink(true);
+        setActiveAboutLink(false);
+      } else if (currentScroll >= aboutY) {
+        setActiveNavLink(false);
+        setActiveUploadLink(false);
+        setActiveCreateLink(false);
+        setActiveViewLink(false);
+        setActiveAboutLink(true);
+      }
     }
   };
 
@@ -141,6 +217,16 @@ export const Manual = () => {
           >
             Navigation
           </a>
+          {email == "admin" ? (
+            <a
+              className={activeAdminLink ? styles.active : styles.sidebarA}
+              href="#admin"
+            >
+              User management
+            </a>
+          ) : (
+            <div></div>
+          )}
           <a
             className={activeUploadLink ? styles.active : styles.sidebarA}
             href="#upload"
@@ -181,7 +267,9 @@ export const Manual = () => {
               treated as the homepage, where you will see all the
               functionalities offered or what is it you can do in the
               application. When you click the button of the respective page you
-              want to go to, you will be redirected to that page.
+              want to go to, you will be redirected to that page. If you are an
+              admin, you will see an extra functionality labeled as &quot;User
+              Management&quot;.
             </div>
             <div className={"float-start " + styles.pictureContainer}>
               <img src={docs1} className="img-fluid" alt="" />
@@ -208,7 +296,8 @@ export const Manual = () => {
               history, and manual). The current directory will be highlighted
               (e.g. the history icon is highlighted when you are at the edit
               history page). You will be able to click the other icons to go to
-              those pages.
+              those pages. If you are an admin, you will see an extra icon in
+              the navigation bar labeled as &quot;Manage&quot;.
             </div>
             <div className={"float-start " + styles.pictureContainer}>
               <img src={docs1} className="img-fluid" alt="" />
@@ -273,6 +362,171 @@ export const Manual = () => {
               That is all for the tutorial on how to navigate the application.
             </div>
           </div>
+
+          {/* Admin block */}
+          {email == "admin" ? (
+            <div id="admin" ref={adminRef}>
+              <h3 className="pt-3">User management</h3>
+              <div className={styles.content}>
+                Welcome to the admin page! Here you will learn how to manage
+                SHAC users.
+              </div>
+              <div className={styles.content}>
+                Upon clicking the manage button, either from the dashboard or
+                from the navigation bar, you will be redirected to the User
+                Management page. Here you can view, search, edit, delete,
+                accept, and decline users. It also includes resetting of user
+                passwords and viewing individual user uploads.
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin1} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>Dashboard page.</div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin2} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Click manage button to go User Management page.
+                </div>
+              </div>
+              <div className={"float-middle " + styles.pictureContainer}>
+                <img src={admin3} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  You have redirected to User Management page.
+                </div>
+              </div>
+              <div className={styles.content}>
+                In the User Management page, the default display are the SHAC
+                users who have already created an account. When a SHAC user is
+                clicked, you will be able to edit the user&apos;s first name,
+                middle name, and last name. You will also be able to view the
+                files they have uploaded, and be able to delete the user. When
+                the save changes button or delete user button is clicked, a
+                confirmation action will appear. Simply type in the required
+                text and click confirm action to proceed with the action.
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin3} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>User Management page.</div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin4} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  SHAC user information.
+                </div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin5} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Save changes confirmation.
+                </div>
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin6} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Delete user confirmation.
+                </div>
+              </div>
+              <div className={styles.content}>
+                For the registrations tab, here you will see the users who have
+                newly registered. Each user registration must be approved by the
+                admin. To approve, click on the confirm button and a
+                confirmation message wil appear. To decline, click on the
+                decline button and a confirmatin message will appear. Type the
+                displayed text to either confirm or decline the registered user.
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin7} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Empty registration tab.
+                </div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin8} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  A newly registered user.
+                </div>
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin9} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  View newly registered user.
+                </div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin10} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Confirm registration of new user.
+                </div>
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin11} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Decline registration of new user.
+                </div>
+              </div>
+              <div className={styles.content}>
+                For the reset request tab, you will be able to see the reset
+                password requests of the users. Click on a user to view them.
+                When the reset button is clicked, you will be prompted to create
+                a new password or you may click generate to randomly generate a
+                new password. When confirm action is clicked, the new password
+                will be shown to the user that requested a new password in the
+                forgot password page. When the decline button is clicked, the
+                request of the user will be denied.
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin12} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Empty reset requests tab.
+                </div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin13} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  A new request from a user.
+                </div>
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin14} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>View user request.</div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin15} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Reset the password of user.
+                </div>
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin19} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Decline request of user.
+                </div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin16} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Login page of the user that requested.
+                </div>
+              </div>
+              <div className={"float-start " + styles.pictureContainer}>
+                <img src={admin17} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  Upon clicking forgot password.
+                </div>
+              </div>
+              <div className={"float-end " + styles.pictureContainer}>
+                <img src={admin18} className="img-fluid" alt="" />
+                <div className={styles.imageCaption}>
+                  When submit is clicked, new password appears.
+                </div>
+              </div>
+              <div className={styles.content}>
+                That is all for the tutorial on user management.
+              </div>
+            </div>
+          ) : (
+            <div></div>
+          )}
 
           {/* Upload documents block */}
           <div id="upload" ref={uploadRef}>

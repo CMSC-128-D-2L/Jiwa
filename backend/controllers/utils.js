@@ -723,7 +723,7 @@ exports.validateRequiredUnits = (student) => {
 
   let name = student.firstName + " " + student.lastName
   
-  if(!students.totalUnits || !students.reqUnits){
+  if(!student.totalUnits || !student.reqUnits){
     errorReport.meetRequiredUnits++;
     errorReport.reqUnitsDiagnostics.push('Undefined total units of student or undefined required units for the course');
   }

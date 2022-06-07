@@ -217,13 +217,13 @@ exports.editUser = async (req, res) => {
     //Frontend stuff
     //Check if token exists
     if (!req.cookies || !req.cookies.authToken) {
-        res.status(401).send({ message: 'Unauthorized access.' });
+        return res.status(401).send({ message: 'Unauthorized access.' });
     }
 
     // Verify token
     const token = await utils.verifyToken(req);
     if (!token.status) {
-        res.status(token.code).send({ message: token.message })
+        return res.status(token.code).send({ message: token.message })
     }
 
     const user = {

@@ -722,7 +722,11 @@ exports.validateRequiredUnits = (student) => {
   }
 
   let name = student.firstName + " " + student.lastName
-
+  
+  if(!students.totalUnits || !students.reqUnits){
+    errorReport.meetRequiredUnits++;
+    errorReport.reqUnitsDiagnostics.push('Undefined total units of student or undefined required units for the course');
+  }
   if(student.totalUnits<student.reqUnits){
     errorReport.meetRequiredUnits++;
     errorReport.reqUnitsDiagnostics.push('Units: ' + student.reqUnits);
@@ -766,6 +770,8 @@ exports.validateSPThesis = (student) => {
   //flags when a student is taking SP
   let SP_TopicProposalDone = false
 
+  let takenSPThesisSameSem = false
+
   let SP_passed 
   let thesis_passed
 
@@ -783,6 +789,7 @@ exports.validateSPThesis = (student) => {
       }
       //Error: student taking SP and Thesis in the same semester
       if(coursesTakenPerSem.includes('200') && coursesTakenPerSem.includes('190')){
+        takenSPThesisSameSem = true
         break
       }
 
@@ -929,11 +936,14 @@ exports.validateSPThesis = (student) => {
           }
       }
   }
-  if(!SP_passed && !thesis_passed){
+    if(takenSPThesisSameSem){
+      error.Report.SP_thesis_error++
+      errorReport.SP_thesis_diagnostics.push('Student took SP and Thesis at the same time')
+    }else if(!SP_passed && !thesis_passed){
     //console.log('Student has neither passed SP nor thesis')
-    errorReport.SP_thesis_error++
-    errorReport.SP_thesis_diagnostics.push('Student did not pass/take neither thesis nor SP')
-  }
+      errorReport.SP_thesis_error++
+      errorReport.SP_thesis_diagnostics.push('Student did not pass/take neither thesis nor SP')
+    }
 
   return errorReport
 }

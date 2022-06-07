@@ -413,8 +413,6 @@ export const Taskbar = ({
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log(searchParams.get("email"));
-          console.log(data);
           setData(
             removeDuplicates(
               data.filter((user) =>
@@ -726,7 +724,6 @@ export const Taskbar = ({
       if (filter !== 0 && sort === 0) {
         // If only filter is selected
         // Selected Deselected Occupied
-        console.log("EHEHE");
         fetch(
           apiUrl(
             choices[filter] === "GWA"
@@ -1286,7 +1283,6 @@ export const Taskbar = ({
 
               data.map((user) => (user.checked = false));
               await setToPrint(true);
-              console.log("PRINT");
               window.print();
               await setToPrint(false);
             }}

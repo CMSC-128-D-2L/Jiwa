@@ -71,7 +71,6 @@ export const ViewRecords = () => {
       )
         .then((response) => response.json())
         .then((temp) => {
-          console.log(temp);
           setData(
             temp.map((student, index) => ({
               ...student,

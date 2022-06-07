@@ -38,6 +38,8 @@ export const UploadDocs = () => {
   // statistics of the upload, from the POST request
   const [uploadReport, setUploadReport] = useState({});
 
+  const [currentReqUnits, setCurrentReqUnits] = useState(0);
+
   useEffect(() => {
     document.body.style.overflow = "unset";
     if (state) {
@@ -138,7 +140,8 @@ export const UploadDocs = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
+        setCurrentReqUnits(data.reqUnits);
+
         studentCompleteData = data;
 
         let rows = [];
@@ -357,6 +360,9 @@ export const UploadDocs = () => {
     let { id } = errorStudents[currentErrorStudent];
 
     let student = convertRowsToSems(errorStudentData[currentErrorStudent]);
+
+    student.reqUnits = currentReqUnits;
+
     let payload = new FormData();
     payload.append("NewStudentDetails", JSON.stringify(student));
     payload.append(

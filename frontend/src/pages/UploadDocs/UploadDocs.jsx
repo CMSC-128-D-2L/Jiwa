@@ -323,7 +323,7 @@ export const UploadDocs = () => {
 
     fetch(apiUrl("/student/"), payload)
       .then((response) => {
-        // if (!response.ok) throw response;
+        if (!response.ok && response.status !== 400) throw response;
         return response.json();
       })
       .then((data) => {
